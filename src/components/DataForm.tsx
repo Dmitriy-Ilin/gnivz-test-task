@@ -20,7 +20,7 @@ const schema = z.object({
       (val) => val !== null && val !== undefined,
       "Поле является обязательным"
     ),
-  phoneNumber: z.string().regex(/^\+7\d{10}$/, "Поле является обязательным"),
+  phoneNumber: z.string().regex(/^([78])\d{10}$/, "Поле является обязательным"),
   email: z.string().email("Введен некорректный адрес почты"),
   registrationAddress: z.string().optional(),
   employerName: z.string().optional(),
